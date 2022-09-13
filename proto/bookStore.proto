@@ -1,0 +1,11 @@
+ synthax = 'proto3'
+
+ package bookStorePackage;
+
+ // book service definition
+
+ service Book{
+    rpc createBook(BookItem) returns (BookItem);
+    rpc readBook(BookRequest) returns (BookItem);
+    rpc readBooks(Empty) returns (BooksList);
+ }
