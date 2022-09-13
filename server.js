@@ -26,6 +26,17 @@ server.bindAsync('0.0.0.0:50051', gprc.ServerCredentials.createInsecure(), ()=>{
 
 // noob functions
 
-function createBook(){}
+const books = [];
+
+function createBook(call,callback){
+    const book = call.request.book;
+    const bookObject = {
+        'id': books.length +1,
+        'book': book
+    };
+
+    books.push(bookObject);
+    callback(null,bookObject);
+}
 function readBook(){}
 function readBooks(){}
