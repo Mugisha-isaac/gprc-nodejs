@@ -1,4 +1,4 @@
- synthax = 'proto3'
+ syntax = "proto3";
 
  package bookStorePackage;
 
@@ -9,3 +9,28 @@
     rpc readBook(BookRequest) returns (BookItem);
     rpc readBooks(Empty) returns (BooksList);
  }
+
+
+ // BookItem message definition
+
+ message BookItem {
+    int32 id =1;
+    string book = 2;
+ }
+
+
+ message BookRequest {
+    int32 id =1;
+ }
+
+
+ // BookList message definition. this will be an array of BookItem
+
+ message BookList {
+     repeated BookItem books =1;
+ }
+
+ // the method readBooks does not accept any parameter so we have to specify that it is empty.
+  
+  message Empty {
+  }
