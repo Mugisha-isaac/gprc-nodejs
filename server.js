@@ -23,3 +23,9 @@ server.bindAsync('0.0.0.0:50051', gprc.ServerCredentials.createInsecure(), ()=>{
 })
 
 // this server is insecure because there is no ssl configurations
+
+// noob functions
+
+function createBook(){}
+function readBook(){}
+function readBooks(){}
