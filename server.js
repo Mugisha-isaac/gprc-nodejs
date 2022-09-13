@@ -43,4 +43,5 @@ function readBook(call,callBack){
       const book = books.find((book)=>book.id === id);
       callBack(null,book);
 }
-function readBooks(){}
+function readBooks(call,callBack){
+callBack(null,{books:books})}
