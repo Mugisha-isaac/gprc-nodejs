@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "grpc-client":"node ./client.js",
+    "grpc-client": "node ./client.js",
     "grpc-server": "node ./server.js"
   },
   "dependencies": {

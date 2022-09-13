@@ -26,7 +26,7 @@
 
  // BookList message definition. this will be an array of BookItem
 
- message BookList {
+ message BooksList {
      repeated BookItem books =1;
  }
 

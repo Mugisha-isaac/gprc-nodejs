@@ -1,13 +1,13 @@
-const gprc = require('@grpc/grpc-js');
+const grpc = require('@grpc/grpc-js');
 const protoLoader = require('@grpc/proto-loader');
 const packageDefinition = protoLoader.loadSync('./proto/bookStore.proto',{});
-const bookStorePackage = gprc.loadPackageDefinition(packageDefinition).bookStorePackage;
+const bookStorePackage = grpc.loadPackageDefinition(packageDefinition).bookStorePackage;
 
 
 
 // creating the server
 
-const server = new gprc.Server();
+const server = new grpc.Server();
 
 // adding the service
 

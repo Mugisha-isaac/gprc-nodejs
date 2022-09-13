@@ -1,4 +1,4 @@
-const grpc = require('@grpc/grpc-js ');
+const grpc = require('@grpc/grpc-js');
 const protoLoader = require('@grpc/proto-loader');
 const packageDefinition = protoLoader.loadSync('./proto/bookStore.proto', {});
 const bookStorePackage = grpc.loadPackageDefinition(packageDefinition).bookStorePackage;
