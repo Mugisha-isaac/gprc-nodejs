@@ -38,5 +38,9 @@ function createBook(call,callback){
     books.push(bookObject);
     callback(null,bookObject);
 }
-function readBook(){}
+function readBook(call,callBack){
+      const id = call.request.id;
+      const book = books.find((book)=>book.id === id);
+      callBack(null,book);
+}
 function readBooks(){}
